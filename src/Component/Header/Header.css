@@ -1,0 +1,149 @@
+.headerdiv {
+  background-color: #ffffff;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.facebooklogo {
+  height: 40px;
+}
+
+.header-left {
+  width: 20%;
+}
+.search-input-div {
+  background-color: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+.search-icon {
+  font-size: 18px;
+}
+.search-input {
+  width: 80%;
+  outline: none;
+  border: none;
+  height: 25px;
+  font-size: 15px;
+  background-color: #f0f2f5;
+}
+.search-icon-2 {
+  display: none;
+}
+
+/* header middle css */
+.header-middle {
+  width: 43%;
+}
+.header-middle-second-div {
+  margin-block: 1px;
+  width: 75%;
+}
+.middle-items {
+  font-size: xx-large;
+  /* border: 1px solid wheat; */
+  width: 18%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.middleitems-1 {
+  color: blue;
+  border-bottom: solid;
+  border-width: 3px;
+}
+.middle-items:hover {
+  background-color: #f0f2f5;
+  cursor: pointer;
+}
+.toggle-bar {
+  display: none;
+}
+
+/* header right css */
+.header-right {
+  width: 20%;
+  margin-right: 10px;
+}
+.header-right-items {
+  font-size: x-large;
+  border: 1px solid;
+  height: 40px;
+  width: 40px;
+  /* height: 100%;
+  width: 20%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 2px;
+  border-radius: 40px;
+  margin-block: 4px;
+  background-color: #e4e6eb;
+}
+.facebooklogo2 {
+  width: 35px;
+  height: 35px;
+  border-radius: 25px;
+}
+@media screen and (max-width: 1200px) {
+  .search-input-div {
+    display: none;
+  }
+  .search-icon-2 {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 926px) {
+  .header-right {
+    width: 24%;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  /* .middle-items {
+    display: none !important;
+  } */
+  .header-middle {
+    display: none !important;
+  }
+  .header-right {
+    width: 60%;
+  }
+  .header-left {
+    width: 40%;
+  }
+  .toggle-bar {
+    display: block;
+    font-size: x-large;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+  }
+  .header-right-items {
+    width: 30px;
+    height: 30px;
+    font-size: 100%;
+  }
+  .header-right {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 366px) {
+  .header-right {
+    width: 45%;
+  }
+}

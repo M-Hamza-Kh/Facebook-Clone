@@ -1,0 +1,48 @@
+/* .sidebarrow-div {
+  margin-left: 6px;
+} */
+
+.sidebar-div {
+  position: fixed;
+
+  left: 0;
+  width: 22%;
+  height: 94vh;
+  overflow-y: auto;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+/* .sidebar-div::-webkit-scrollbar { */
+/* display: none; */
+/* -ms-overflow-style: none; */
+
+/* } */
+
+.font {
+  font-size: large;
+  font-weight: 600;
+}
+/* .line {
+  width: 90%;
+} */
+/* @media screen and (max-width: 1335px) {
+  .sidebar-div {
+    width: 30%;
+  }
+} */
+/* @media screen and (max-width: 1303px) {
+  .sidebar-div {
+    width: 25%;
+  }
+} */
+.friendsicon {
+  font-size: xx-large;
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 1100px) {
+  .sidebar-div {
+    display: none;
+  }
+}

@@ -1,0 +1,20 @@
+.img {
+  width: 35px;
+  height: 35px;
+  border-radius: 25px;
+}
+/* .icon {
+  font-size: xx-large;
+} */
+.sidebarrow-maindiv {
+  width: 95%;
+  height: 45px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.sidebarrow-maindiv:hover {
+  background-color: #bebec2;
+}
+.clickable:hover {
+  background-color: red;
+}

@@ -1,0 +1,15 @@
+.hell:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.stories-maindiv {
+  padding-top: 20px;
+  /* margin-left: 540px; */
+  height: 18rem;
+  width: 100%;
+}
+@media screen and (max-width: 590px) {
+  #last-story-image {
+    display: none;
+  }
+}
