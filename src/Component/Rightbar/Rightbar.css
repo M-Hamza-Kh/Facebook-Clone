@@ -10,6 +10,17 @@
   font-weight: 600;
   margin-bottom: 0px;
 }
+.logout-button {
+  margin-top: 10px;
+  width: 10rem;
+  height: 35px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffff;
+  background-color: #1877f2;
+  border: 1px solid #1877f2;
+  border-radius: 5px;
+}
 @media screen and (max-width: 1100px) {
   .rightbar-main-div {
     width: 25%;

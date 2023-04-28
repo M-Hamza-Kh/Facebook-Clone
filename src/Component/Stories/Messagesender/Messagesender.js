@@ -1,17 +1,12 @@
 import { TodoContext } from "../../Context/Context";
 import React, { useState, useContext } from "react";
 import "./Messagesender.css";
-import bgpic from "../../../Assets/pic.jpg";
+
 import { AiFillVideoCamera } from "react-icons/ai";
 import { IoMdPhotos } from "react-icons/io";
 import { FaRegLaugh } from "react-icons/fa";
 import { AiTwotoneVideoCamera } from "react-icons/ai";
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  Timestamp,
-} from "firebase/firestore";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { firebaseApp } from "../../firebase";
 
 // import 'firebase/compat/firestore';
@@ -24,7 +19,17 @@ import { firebaseApp } from "../../firebase";
 // } from "firebase/firestore";
 
 const Messagesender = () => {
+  const date = new Date();
+
+  // 👇️ 1/27/2022, 13:18:22
+  console.log(
+    date.toLocaleString("en-US", {
+      hour12: false,
+    })
+  );
   const { state } = useContext(TodoContext);
+
+  // const { getPosts } = useContext(TodoContext);
   // const db = getFirestore();
   const [statea, setstatea] = useState("");
   const [url, seturl] = useState("");
@@ -39,11 +44,14 @@ const Messagesender = () => {
       postmessage: statea,
       profilename: state?.user?.displayName,
       profilepic: state?.user?.photoURL,
-      timestamp: Timestamp.fromDate(new Date("December 10, 1815")),
+      timestamp: date.toLocaleString("en-US", {
+        hour12: false,
+      }),
       postpic: url,
     })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef?.id);
+        // getPosts();
       })
       .catch((error) => {
         console.error("Error adding document: ", error);
@@ -64,10 +72,14 @@ const Messagesender = () => {
   };
   return (
     <>
-      <div className=" messagesenderdiv  border border-danger ">
-        <div className="d-flex border  border-dark align-items-center justify-content-around">
-          <img src={bgpic} alt="none" className="messagesenderimg"></img>
-          <form onSubmit={formhandler} className="border input-form">
+      <div className=" messagesenderdiv   ">
+        <div className="d-flex    align-items-center justify-content-around">
+          <img
+            src={state?.user?.photoURL}
+            alt="none"
+            className="messagesenderimg"
+          ></img>
+          <form onSubmit={formhandler} className=" input-form">
             <input
               className="input ps-2"
               placeholder="What's on your mind"
@@ -88,22 +100,22 @@ const Messagesender = () => {
             ></input>
           </form>
         </div>
-        <div className="border border-dark d-flex justify-content-center w-100">
+        <div className=" d-flex justify-content-center w-100">
           <hr className="straightline"></hr>
         </div>
         <div className="d-flex justify-content-around">
-          <div className="d-flex border align-items-center  justify-content-center items-div">
+          <div className="d-flex  align-items-center  justify-content-center items-div">
             <AiFillVideoCamera className="icons1" />
             <div className="text ps-2">Live vedio</div>
           </div>
-          <div className="d-flex border align-items-center justify-content-center  border items-div">
+          <div className="d-flex  align-items-center justify-content-center   items-div">
             <IoMdPhotos className="icons2" />
 
             <div className="text ps-2 ">Photo/video</div>
           </div>
           <div
             id="alert"
-            className="d-flex align-items-center justify-content-center border items-div "
+            className="d-flex align-items-center justify-content-center  items-div "
           >
             <FaRegLaugh className="icons3" />
 
@@ -111,8 +123,8 @@ const Messagesender = () => {
           </div>
         </div>
       </div>
-      <div className="create-room-div mt-3 border border-dark">
-        <div className="border fonts-div  d-flex justify-content-center align-items-center ms-4">
+      <div className="create-room-div mt-2 ">
+        <div className=" fonts-div  d-flex justify-content-center align-items-center ms-4">
           <AiTwotoneVideoCamera className="icon-font"></AiTwotoneVideoCamera>
           <p className="text-font  mb-0   ms-1">Create-room</p>
         </div>

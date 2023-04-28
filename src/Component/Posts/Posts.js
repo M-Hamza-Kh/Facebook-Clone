@@ -4,7 +4,6 @@ import { HiThumbUp } from "react-icons/hi";
 import { BsChatSquare } from "react-icons/bs";
 import { HiOutlineArrowUturnRight } from "react-icons/hi2";
 import { IoMdArrowDropdown } from "react-icons/io";
-import profileimg from "../../Assets/pic.jpg";
 
 const Posts = ({
   profilepic,
@@ -14,14 +13,12 @@ const Posts = ({
   postpic,
 }) => {
   return (
-    <div className="overall-post border border-4 border-danger">
-      <div className="post-top d-flex align-items-center ms-2 border">
+    <div className="overall-post ">
+      <div className="post-top d-flex align-items-center ms-2 ">
         <img src={profilepic} alt="none" className="post-profile-img"></img>
-        <div className="post-top-info border ">
+        <div className="post-top-info  ">
           <h3 className="post-profile-name">{profilename}</h3>
-          <p className="post-profile-time">
-            {timestamp?.toDate()?.toLocaleString()}
-          </p>
+          <p className="post-profile-time">{timestamp}</p>
         </div>
       </div>
       <div className="post-message ms-2">{postmessage}</div>
@@ -32,20 +29,20 @@ const Posts = ({
         <hr className="post-line"></hr>
       </div>
       <div className="d-flex justify-content-evenly mb-2">
-        <div className=" border post-fonts-div">
+        <div className="  post-fonts-div">
           <HiThumbUp className="post-fonts" />
           <p className="post-text mb-0 ps-2">Like</p>
         </div>
-        <div className=" post-fonts-div border">
+        <div className=" post-fonts-div ">
           <BsChatSquare className="post-fonts" />
           <p className="post-text mb-0  ps-2">Comment</p>
         </div>
-        <div className=" post-fonts-div border">
+        <div className=" post-fonts-div ">
           <HiOutlineArrowUturnRight className="post-fonts" />
           <p className="post-text mb-0  ps-2">Share</p>
         </div>
-        <div className=" border post-fonts-div2">
-          <img src={profileimg} alt="none" className="post-profile-image"></img>
+        <div className="  post-fonts-div2">
+          <img src={profilepic} alt="none" className="post-profile-image"></img>
           <IoMdArrowDropdown />
         </div>
       </div>

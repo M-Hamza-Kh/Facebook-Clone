@@ -39,8 +39,62 @@
 .friendsicon {
   font-size: xx-large;
   margin-left: 5px;
+  color: #4ed3c1;
 }
-
+.actorssicon {
+  font-size: xx-large;
+  margin-left: 5px;
+  color: #22a0f2;
+}
+.groupsicon {
+  font-size: xx-large;
+  margin-left: 5px;
+  color: #3db6f4;
+}
+.watchicon {
+  font-size: xx-large;
+  margin-left: 5px;
+  color: #2fa8d5;
+}
+.memoriesicon {
+  font-size: xx-large;
+  margin-left: 5px;
+  color: black;
+}
+.savedicon {
+  font-size: xx-large;
+  margin-left: 5px;
+  color: rgb(76, 33, 82);
+}
+.speakericon {
+  font-size: xx-large;
+  margin-left: 5px;
+  color: #209ff9;
+}
+.salessicon {
+  font-size: xx-large;
+  margin-left: 5px;
+}
+.savedicon {
+  font-size: xx-large;
+  margin-left: 5px;
+  color: #ef415f;
+}
+.treeicon {
+  font-size: xx-large;
+  margin-left: 5px;
+  color: #3aba59;
+}
+.usericon {
+  font-size: xx-large;
+  margin-left: 5px;
+  color: #c0787a;
+}
+.recenticon {
+  font-size: xx-large;
+  margin-left: 5px;
+  color: #890000;
+}
 @media screen and (max-width: 1100px) {
   .sidebar-div {
     display: none;

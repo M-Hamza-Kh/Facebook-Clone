@@ -1,4 +1,6 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useState, useEffect } from "react";
+
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 export const TodoContext = createContext();
 
@@ -16,9 +18,25 @@ const reducer = (state, action) => {
 
 const TodoStateFunc = (props) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [posts, setposts] = useState([]);
+  const db = getFirestore();
+
+  const getPosts = async () => {
+    const docsSnap = await getDocs(collection(db, "posts"));
+    // debugger;
+    console.log("docsSnap : ", docsSnap?.docs);
+    docsSnap?.docs.map((doc) => {
+      console.log("My Doc : ", doc.data());
+      return setposts(docsSnap?.docs);
+    });
+  };
+
+  useEffect(() => {
+    getPosts();
+  }, [posts]);
 
   return (
-    <TodoContext.Provider value={{ state, dispatch }}>
+    <TodoContext.Provider value={{ state, dispatch, getPosts, posts }}>
       {props.children}
     </TodoContext.Provider>
   );

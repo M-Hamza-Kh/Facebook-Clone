@@ -24,20 +24,17 @@ function App() {
         <Login></Login>
       ) : (
         <div>
-          <Header></Header>
-          <div className=" whole-area border ">
-            <Sidebar></Sidebar>
-            <Feeds></Feeds>
-            <Rightbar></Rightbar>
-          </div>
-          <button
+          <Header
             onClick={() => {
               localStorage.removeItem("token");
               setToken(null);
             }}
-          >
-            Logout
-          </button>
+          ></Header>
+          <div className=" whole-area  ">
+            <Sidebar></Sidebar>
+            <Feeds></Feeds>
+            <Rightbar />
+          </div>
         </div>
       )}
     </>

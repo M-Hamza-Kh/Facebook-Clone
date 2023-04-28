@@ -20,7 +20,7 @@
   height: 31px;
   outline: none;
   background-color: #f0f2f5;
-  border: 5px solid #f0f2f5;
+  border: 1px solid #f0f2f5;
   /* border: 1px solid #f0f2f5; */
 }
 .url-input {
@@ -30,7 +30,7 @@
   height: 31px;
   outline: none;
   background-color: #f0f2f5;
-  border: 5px solid #f0f2f5;
+  border: 1px solid #f0f2f5;
 }
 .straightline {
   width: 97%;

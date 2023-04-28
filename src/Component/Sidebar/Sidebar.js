@@ -25,7 +25,7 @@ const Sidebar = (props) => {
     settoggle(!toggle);
   };
   return (
-    <div className="sidebar-div border border-dark pt-4 ps-1">
+    <div className="sidebar-div  pt-4 ps-1">
       <Sidebarrow
         src={state.user.photoURL}
         title={state.user.displayName}
@@ -40,55 +40,55 @@ const Sidebar = (props) => {
       <Sidebarrow
         Icon={MdRecentActors}
         title="Most recent"
-        className="friendsicon "
+        className="actorssicon "
       ></Sidebarrow>
       <Sidebarrow
         Icon={MdGroups2}
         title="Groups"
-        className="friendsicon "
+        className="groupsicon "
       ></Sidebarrow>
       <Sidebarrow src={market} title="Market place"></Sidebarrow>
       <Sidebarrow
         Icon={IoTvSharp}
         title="Watch"
-        className="friendsicon "
+        className="watchicon "
       ></Sidebarrow>
       <Sidebarrow
         Icon={FcClock}
         title="Memories"
-        className="friendsicon "
+        className="memoriesicon "
       ></Sidebarrow>
       <Sidebarrow
         Icon={TfiSave}
-        title="Saved"
-        className="friendsicon "
+        title="Recent Ad"
+        className="savedicon "
       ></Sidebarrow>
       {toggle && (
         <Sidebarrow
           Icon={TbSpeakerphone}
-          title="saved"
-          className="friendsicon "
+          title="Ad Center"
+          className="speakericon "
         ></Sidebarrow>
       )}
       {toggle && (
         <Sidebarrow
           Icon={FcSalesPerformance}
           title="saved"
-          className="friendsicon "
+          className="salessicon "
         ></Sidebarrow>
       )}
       {toggle && (
         <Sidebarrow
           Icon={BsDropletFill}
-          title="saved"
-          className="friendsicon "
+          title="Blood Donations"
+          className="savedicon "
         ></Sidebarrow>
       )}
       {toggle && (
         <Sidebarrow
           Icon={BsTreeFill}
-          title="saved"
-          className="friendsicon "
+          title="Climate Change"
+          className="treeicon "
         ></Sidebarrow>
       )}
       <Sidebarrow
@@ -103,7 +103,7 @@ const Sidebar = (props) => {
       <Sidebarrow
         Icon={FaUserFriends}
         title="League of Angels III"
-        className="friendsicon "
+        className="usericon "
       ></Sidebarrow>
       <Sidebarrow
         src={state.user.photoURL}
@@ -112,7 +112,7 @@ const Sidebar = (props) => {
       <Sidebarrow
         Icon={MdRecentActors}
         title="Texas Hold Em poker"
-        className="friendsicon "
+        className="recenticon "
       ></Sidebarrow>
     </div>
   );

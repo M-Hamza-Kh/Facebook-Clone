@@ -1,5 +1,5 @@
 .story-maindiv {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 20%;
   height: 15rem;
   position: relative;
@@ -28,7 +28,7 @@
 }
 @media screen and (max-width: 590px) {
   .story-maindiv {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 25%;
     height: 15rem;
     position: relative;

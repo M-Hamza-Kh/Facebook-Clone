@@ -72,7 +72,7 @@
 }
 .header-right-items {
   font-size: x-large;
-  border: 1px solid;
+  /* border: 1px solid; */
   height: 40px;
   width: 40px;
   /* height: 100%;
@@ -89,6 +89,24 @@
   width: 35px;
   height: 35px;
   border-radius: 25px;
+  cursor: pointer;
+}
+.logout-button-div {
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  background-color: #ffffff;
+  margin-top: 130px;
+  margin-right: 180px;
+}
+.logout-button-second-div:hover {
+  background-color: #e4e6eb;
+  cursor: pointer;
+}
+.logout-icon {
+  font-size: 35px;
+}
+.logou-para {
 }
 @media screen and (max-width: 1200px) {
   .search-input-div {
